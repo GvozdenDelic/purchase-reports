@@ -1,0 +1,26 @@
+// Global vars
+$font: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+$fontsize: 16px;
+$fontsizesmall: 12px;
+$lineheight: 1.5;
+$fontweightnormal: 400;
+$radius: 8px;
+
+// Layout
+$appwidth: 80rem;
+$gap: 1rem;
+$gapsmall: 0.5rem;
+
+// Colors
+$white: #fff;
+$gallery: #eee;
+$alto: #ddd;
+$black: #242424;
+$cornflowerblue: #646cff;
+$royalblue: #535bf2;
+$cloudburst: #213547;
+$alabaster: #f9f9f9;
+
+// Transitions
+$transition: 0.2s ease-out;
+$easing: cubic-bezier(0.66, 0.17, 0.25, 1)

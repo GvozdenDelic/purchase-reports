@@ -1,0 +1,9 @@
+.recommendations {
+    &__product:not(:last-child)::after {
+        content: ',';
+    }
+
+    &__product:last-child::after {
+        content: '.';
+    }
+}

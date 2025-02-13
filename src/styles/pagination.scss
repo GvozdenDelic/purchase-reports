@@ -1,0 +1,37 @@
+// Styles for react-paginate library
+.pagination {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    justify-content: center;
+    background: $cornflowerblue;
+
+    li {
+        border: 1px solid $royalblue;
+        border-right: none;
+        transition: $transition;
+
+        &:hover,
+        &.active {
+            background: $royalblue;
+        }
+
+        &:last-of-type {
+            border-right: 1px solid $royalblue;
+        }
+
+        a {
+            cursor: pointer;
+            padding: 0 $gapsmall;
+            line-height: 2rem;
+            color: $white;
+        }
+
+        &.disabled {
+            pointer-events: none;
+            opacity: 0;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+    
+    &::after {
+        content: " ";
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2px solid $cornflowerblue;
+        border-color: $cornflowerblue transparent $cornflowerblue transparent;
+        animation: spinner 1s $easing infinite;
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 

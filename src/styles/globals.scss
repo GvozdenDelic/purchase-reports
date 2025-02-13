@@ -1,0 +1,145 @@
+// Globally used styles
+#root {
+    width: 100%;
+    max-width: $appwidth;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  :root {
+    font-size: $fontsize;
+    font-family: $font;
+    line-height: $lineheight;
+    font-weight: $fontweightnormal;
+  
+    color-scheme: light dark;
+    color: $white;
+    background-color: $black;
+  
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  a {
+    font-weight: $fontweightnormal;
+    color: $cornflowerblue;
+    text-decoration: inherit;
+  
+    &:hover {
+      color: $royalblue;
+    }
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    justify-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  
+  button {
+    border-radius: $radius;
+    border: 1px solid transparent;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    font-weight: $fontweightnormal;
+    font-family: inherit;
+    background-color: $black;
+    cursor: pointer;
+    transition: border-color 0.25s;
+  
+    &:hover {
+      border-color: $cornflowerblue;
+    }
+  
+    &:focus,
+    &:focus-visible {
+      outline: 0 auto -webkit-focus-ring-color;
+    }
+  }
+
+  label {
+    display: flex;
+    justify-content: center;
+    padding: $gapsmall $gap;
+  }
+
+  input[type="number"] {
+    display: flex;
+    justify-self: center;
+    width: 150px;
+    padding: $gapsmall $gap;
+    border: 2px solid $cornflowerblue;
+    margin-bottom: $gap;
+
+    &:focus,
+    &:focus-visible {
+        border: 2px solid $cornflowerblue;
+        outline: none;
+    }
+  }
+  
+  input[type="file"] {
+    background-color: $white;
+    border: 1px solid $cornflowerblue;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    
+    &::file-selector-button {
+        background-color: $cornflowerblue;
+        color: $white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        margin-right: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: $royalblue;
+        }
+    }
+
+    &:hover::file-selector-button {
+        background-color: $royalblue;
+    }
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: $cloudburst;
+      background-color: $white;
+    }
+    a:hover {
+      color: $cornflowerblue;
+    }
+    button {
+      background-color: $alabaster;
+    }
+  }
+  
+.uncover {
+    opacity: 0;
+    animation: fadeIn 0.3s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+  
